@@ -6,7 +6,7 @@ import OpenGraphInput from './OpenGraphInput'
 
 export default defineType({
   name: 'settings',
-  title: 'Settings',
+  title: 'Configurações',
   type: 'document',
   icon: CogIcon,
   preview: { select: { title: 'title', subtitle: 'description' } },
@@ -15,7 +15,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      description: 'This field is the title of your blog.',
+      description: 'Defina o título do blog',
       title: 'Title',
       type: 'string',
       initialValue: demo.title,
@@ -24,7 +24,7 @@ export default defineType({
     defineField({
       name: 'description',
       description:
-        'Used both for the <meta> description tag for SEO, and the blog subheader.',
+        'Use essa descrição para otimização de SEO do seu blog',
       title: 'Description',
       type: 'array',
       initialValue: demo.description,

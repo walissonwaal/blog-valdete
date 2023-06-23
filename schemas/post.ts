@@ -18,13 +18,13 @@ import authorType from './author'
 
 export default defineType({
   name: 'post',
-  title: 'Post',
+  title: 'Artigo',
   icon: BookIcon,
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
       validation: (rule) => rule.required(),
     }),
@@ -41,18 +41,18 @@ export default defineType({
     }),
     defineField({
       name: 'content',
-      title: 'Content',
+      title: 'Corpo do artigo',
       type: 'array',
       of: [{ type: 'block' }],
     }),
     defineField({
       name: 'excerpt',
-      title: 'Excerpt',
+      title: 'Breve resumo',
       type: 'text',
     }),
     defineField({
       name: 'coverImage',
-      title: 'Cover Image',
+      title: 'Imagem',
       type: 'image',
       options: {
         hotspot: true,
@@ -60,13 +60,13 @@ export default defineType({
     }),
     defineField({
       name: 'date',
-      title: 'Date',
+      title: 'Data',
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'author',
-      title: 'Author',
+      title: 'Autor(a)',
       type: 'reference',
       to: [{ type: authorType.name }],
     }),
