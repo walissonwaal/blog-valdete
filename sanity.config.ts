@@ -3,19 +3,19 @@
  */
 
 import { visionTool } from '@sanity/vision'
-import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
-import { previewDocumentNode } from 'plugins/previewPane'
-import { productionUrl } from 'plugins/productionUrl'
-import { settingsPlugin, settingsStructure } from 'plugins/settings'
+import { apiVersion, dataset, previewSecretId, projectId } from './lib/sanity.api'
+import { previewDocumentNode } from './plugins/previewPane'
+import { productionUrl } from './plugins/productionUrl'
+import { settingsPlugin, settingsStructure } from './plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-import authorType from 'schemas/author'
-import postType from 'schemas/post'
-import settingsType from 'schemas/settings'
+import authorType from './schemas/author'
+import postType from './schemas/post'
+import settingsType from './schemas/settings'
 
 const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Next.js Blog with Sanity.io'
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Blog Pra. Valdete Luz'
 
 export default defineConfig({
   basePath: '/studio',
