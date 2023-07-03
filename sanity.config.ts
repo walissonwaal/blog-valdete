@@ -18,7 +18,7 @@ const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Blog Pra. Valdete Luz'
 
 export default defineConfig({
-  basePath: '/studio',
+  basePath: '/backend',
   projectId,
   dataset,
   title,
